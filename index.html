@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NGO Website</title>
+    <title>Dance4Dreams</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <style>
         body {
@@ -47,7 +47,7 @@
         }
 
         .hero {
-            background: url('hero.jpg') no-repeat center center/cover;
+            background: url('dance4dreams.jpg') no-repeat center center/cover;
             height: 400px;
             display: flex;
             justify-content: center;
@@ -105,8 +105,10 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#what-we-do">What We Do</a></li>
+                <li><a href="#Our Mission">Our Mission</a></li>
+				<li><a href="#Meet the Founder">Meet the Founder</a></li>				
                 <li><a href="#events">Our Events</a></li>
+				<li><a href="#Donate">Donate</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -114,45 +116,41 @@
 
     <section id="home">
         <div class="hero">
-            <h1>Welcome to Our NGO</h1>
-            <p>Making the world a better place, one step at a time.</p>
+            <h1>Welcome to Dance4Dreams. </h1>
+            <p>Rhythm in our feet, hope in our hearts, dreams in our future.</p>
         </div>
     </section>
 
-    <section id="what-we-do">
-        <h2>What We Do</h2>
-        <p>Our mission is to help those in need through various initiatives and programs. We focus on providing food, education, and healthcare to underprivileged communities.</p>
+    <section id="Our Mission">
+        <h2>Our Mission</h2>
+        <p>Dance4Dreams Inc. is a 501(c)(3) nonprofit organization committed to bringing the art of Bharatanatyam and Indian classical dance to children in underserved communities. Our mission is to expand artistic abilities and nurture creative minds among youth who lack access to cultural and artistic resources. Through remote instruction and partnerships with local Rotary clubs, we reach students across diverse areas, breaking down geographical and economic barriers. By providing high-quality dance education, we aim to foster self-expression, cultural awareness, and personal growth in our students, empowering them to explore their artistic potential and connect with their heritage.</p>
     </section>
-
+	
+	<section id="Meet the Founder">        
+            <h1>Meet the Founder</h1>
+            <p>Will Update Soon.....</p>
+        </div>
+    </section>
+	
     <section id="events">
         <h2>Our Events</h2>
-        <p>Join us at our upcoming events to support our cause and make a difference.</p>
+        <p>Stay tuned for upcoming events! Join us at our upcoming events to support our cause and make a difference.</p>
         <!-- Add event details here -->
     </section>
-
+	
+	<section id="Donate">
+        <h2>Donate</h2>
+        <p>Your donation to Dance4Dreams Inc. goes beyond dance - it supports the overall education of children in underserved communities. While we teach Bharatanatyam, our program aims to enhance students' academic performance, discipline, and focus. Your contribution helps provide resources that extend into their general education, supporting literacy, numeracy, and overall academic achievement. By donating, you're investing in a child's future, helping to bridge educational gaps and create opportunities for success.</p>
+    </section>
+	
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Get in touch with us to learn more about our work or to get involved.</p>
-        <div id="map"></div>
+		<p>Feel Free to contact us at:</p>
+        <p>dance4dreamsinc@gmail.com</p>
     </section>
 
     <footer>
         <p>&copy; 2024 NGO. All rights reserved.</p>
-    </footer>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-    <script>
-        function initMap() {
-            var location = {lat: -34.397, lng: 150.644};
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 8,
-                center: location
-            });
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
-        }
-    </script>
+    </footer>    
 </body>
 </html>
