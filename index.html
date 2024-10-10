@@ -10,7 +10,10 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-image: url('dance4dreams.jpg'); /* Replace with your image path */
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
             color: #333;
             display: flex;
             flex-direction: column;
@@ -46,8 +49,16 @@
             font-size: 18px;
         }
 
+        .circle-logo {
+            width: 100px; /* Set the desired width */
+            height: 100px; /* Set the height equal to the width for a perfect circle */
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image covers the area without stretching */
+        }
+
         .hero {
             background: url('dance4dreams.jpg') no-repeat center center/cover;
+            background-color: #003366; /* Fallback color if the image doesn't load */
             height: 400px;
             display: flex;
             justify-content: center;
@@ -65,23 +76,25 @@
             font-size: 24px;
             margin: 10px 0 0;
         }
-	.highlight-text {
-		color: white; /* or any color you prefer */
-		text-shadow: 
-			2px 2px 0 #008000, /* green shadow to the bottom-right */
-			-2px 2px 0 #008000, /* green shadow to the bottom-left */
-			2px -2px 0 #008000, /* green shadow to the top-right */
-			-2px -2px 0 #008000; /* green shadow to the top-left */
-		font-family: 'Arial', sans-serif; /* customize your font */
-		font-weight: bold; /* make the text bold */
-	}
+
+        .highlight-text {
+            color: white; /* or any color you prefer */
+            text-shadow: 
+                2px 2px 0 #008000, /* green shadow to the bottom-right */
+                -2px 2px 0 #008000, /* green shadow to the bottom-left */
+                2px -2px 0 #008000, /* green shadow to the top-right */
+                -2px -2px 0 #008000; /* green shadow to the top-left */
+            font-family: 'Arial', sans-serif; /* customize your font */
+            font-weight: bold; /* make the text bold */
+        }
+
         section {
             padding: 60px 20px;
             text-align: center;
             flex: 1;
             background-color: white;
             margin: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         section h2 {
@@ -106,60 +119,150 @@
             padding: 10px 0;
             width: 100%;
         }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            header img {
+                height: 40px; /* Adjust logo size for smaller screens */
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack navigation items */
+                align-items: center; /* Center items */
+            }
+
+            nav ul li {
+                margin: 10px 0; /* Space between stacked items */
+            }
+
+            .hero {
+                height: 300px; /* Adjust hero section height */
+            }
+
+            .hero h1 {
+                font-size: 36px; /* Smaller font size for mobile */
+            }
+
+            .hero p {
+                font-size: 20px; /* Smaller font size for mobile */
+            }
+
+            section h2 {
+                font-size: 28px; /* Adjust heading size */
+            }
+
+            section p {
+                font-size: 16px; /* Adjust paragraph size */
+            }
+
+            .circle-logo {
+                width: 80px; /* Smaller circle logo for mobile */
+                height: 80px; /* Smaller circle logo for mobile */
+            }
+
+            .scroll-container {
+                font-size: 16px; /* Adjust font size in scroll container */
+            }
+        }
+
+        .scroll-container {
+            display: inline-block;
+            white-space: nowrap; /* Prevent the text from wrapping */
+            animation: scroll-text 10s linear infinite; /* Adjust timing as needed */
+        }
+
+        @keyframes scroll-text {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .highlight-text {
+            color: white; /* Customize the text color */
+            text-shadow: 
+                2px 2px 0 #008000, 
+                -2px 2px 0 #008000, 
+                2px -2px 0 #008000, 
+                -2px -2px 0 #008000;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            margin: 0 10px; /* Add space between text elements */
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="D4Dlogo.jpg" alt="NGO Logo">
+        <img src="D4Dlogo.jpg" alt="NGO Logo" class="circle-logo">
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#Our Mission">Our Mission</a></li>
-				<li><a href="#Meet the Founder">Meet the Founder</a></li>				
+                <li><a href="#Meet the Founder">Meet the Founder</a></li>                
                 <li><a href="#events">Our Events</a></li>
-				<li><a href="#Donate">Donate</a></li>
+                <li><a href="#Donate">Donate</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home">
-    <div class="hero">
-        <h1 class="highlight-text">Welcome to Dance4Dreams.</h1>
-        <p class="highlight-text">Rhythm in our feet, hope in our hearts, dreams in our future.</p>
-    </div>
-	</section>
+        <div class="hero">
+            <div class="scroll-container">
+                <h1 class="highlight-text">Welcome to Dance4Dreams.</h1>
+                <p class="highlight-text">Rhythm in our feet, hope in our hearts, dreams in our future.</p>
+            </div>
+        </div>
+    </section>
 
     <section id="Our Mission">
         <h2>Our Mission</h2>
         <p>Dance4Dreams Inc. is a 501(c)(3) nonprofit organization committed to bringing the art of Bharatanatyam and Indian classical dance to children in underserved communities. Our mission is to expand artistic abilities and nurture creative minds among youth who lack access to cultural and artistic resources. Through remote instruction and partnerships with local Rotary clubs, we reach students across diverse areas, breaking down geographical and economic barriers. By providing high-quality dance education, we aim to foster self-expression, cultural awareness, and personal growth in our students, empowering them to explore their artistic potential and connect with their heritage.</p>
     </section>
-	
-	<section id="Meet the Founder">        
-            <h1>Meet the Founder</h1>
-            <p>Will Update Soon.....</p>
+    
+    <section id="Meet the Founder">        
+        <h2>Meet the Founder</h2>  
+        <p>Ms. Diya Sivasubramani is a passionate dancer who has dedicated herself to mastering various dance forms. From a young age, she has been captivated by the art of movement, finding joy and expression in every step. Diya believes that dance is not only a form of artistic expression but also a powerful medium for storytelling and cultural preservation. Her enthusiasm for dance inspires those around her, as she actively participates in community events and workshops, sharing her knowledge and love for this vibrant art form. With a deep commitment to honing her skills, Diya continually seeks opportunities to learn and grow, embodying the spirit of a true artist.</p>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+            <a href="a1.jpg" target="_blank">
+                <img src="a1.jpg" alt="Founder Image 1" style="width: 200px; height: 200px; object-fit: cover; cursor: pointer;">
+            </a>
+            <a href="a2.jpg" target="_blank">
+                <img src="a2.jpg" alt="Founder Image 2" style="width: 200px; height: 200px; object-fit: cover; cursor: pointer;">
+            </a>
+            <a href="a3.jpg" target="_blank">
+                <img src="a3.jpg" alt="Founder Image 3" style="width: 200px; height: 200px; object-fit: cover; cursor: pointer;">
+            </a>
+            <a href="a4.jpg" target="_blank">
+                <img src="a4.jpg" alt="Founder Image 4" style="width: 200px; height: 200px; object-fit: cover; cursor: pointer;">
+            </a>
+			<a href="a5.jpg" target="_blank">
+                <img src="a5.jpg" alt="Founder Image 5" style="width: 200px; height: 200px; object-fit: cover; cursor: pointer;">
+            </a>
         </div>
     </section>
-	
+
     <section id="events">
         <h2>Our Events</h2>
-        <p>Stay tuned for upcoming events! Join us at our upcoming events to support our cause and make a difference.</p>
-        <!-- Add event details here -->
+        <p>Dance4Dreams organizes various events and workshops throughout the year, aimed at promoting dance and cultural awareness. Our events are open to all, and we invite you to join us in celebrating the beauty of dance.</p>
     </section>
-	
-	<section id="Donate">
+
+    <section id="Donate">
         <h2>Donate</h2>
-        <p>Your donation to Dance4Dreams Inc. goes beyond dance - it supports the overall education of children in underserved communities. While we teach Bharatanatyam, our program aims to enhance students' academic performance, discipline, and focus. Your contribution helps provide resources that extend into their general education, supporting literacy, numeracy, and overall academic achievement. By donating, you're investing in a child's future, helping to bridge educational gaps and create opportunities for success.</p>
-    </section>
+        <p>Your donation to Dance4Dreams Inc. goes beyond dance - it supports the overall education of children in underserved communities. While we teach Bharatanatyam, our program aims to enhance students' academic performance, discipline, and focus. Your contribution helps provide resources that extend into their general education, supporting literacy, numeracy, and overall academic achievement. By donating, you're investing in a child's future, helping to bridge educational gaps and create opportunities for success.
+		If you're interested in making a donation, please reach out to the email address provided in the Contact Us section.</p>
+    </section>    
 	
-    <section id="contact">
+	<section id="contact">
         <h2>Contact Us</h2>
 		<p>Feel Free to contact us at:</p>
         <p>dance4dreamsinc@gmail.com</p>
     </section>
 
     <footer>
-        <p>&copy; 2024 NGO. All rights reserved.</p>
-    </footer>    
+        <p>&copy; 2024 Dance4Dreams. All rights reserved.</p>
+    </footer>
 </body>
 </html>
