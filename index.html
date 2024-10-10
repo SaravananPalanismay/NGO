@@ -190,7 +190,47 @@
             font-family: 'Arial', sans-serif;
             font-weight: bold;
             margin: 0 10px; /* Add space between text elements */
+        }	
+    /* Mobile-friendly styles */
+    @media (max-width: 600px) {
+        #Meet-the-Founder {
+            padding: 10px;
         }
+
+        #Meet-the-Founder h2 {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        #Meet-the-Founder p {
+            font-size: 1em;
+            text-align: justify;
+            margin: 0 10px;
+        }
+
+        /* Center the image and make it smaller on mobile */
+        #Meet-the-Founder .founder-image, 
+        #Meet-the-Founder .video-thumbnail {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 10px 0;
+        }
+
+        #Meet-the-Founder img {
+            width: 150px; /* Reduce size on mobile */
+            height: auto;
+        }
+
+        /* Make YouTube thumbnail smaller on mobile */
+        #Meet-the-Founder .video-thumbnail img {
+            width: 100%;
+            max-width: 320px; /* Adjust maximum width */
+            height: auto;
+        }
+    }
+
     </style>
 </head>
 <body>
